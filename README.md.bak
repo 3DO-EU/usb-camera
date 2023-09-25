@@ -19,7 +19,7 @@ This repository contains reference designs, additional resources may be found on
 
 ## Folders
 - printers  printers (mounts for different printers)
-- hardware (similar to [3DO Nozzle camera](https://github.com/3DO-EU/nozzle-camera/tree/main/hardware))
+- hardware (CAD files to help design printer mounts)
 
 ## Pinout
 PCB uses a 5P 1.0mm pitch connector.
