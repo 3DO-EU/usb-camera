@@ -58,7 +58,7 @@ Example of folding FPC
 ## Where to buy
 EU / UK
 
-<a alt="3DO" href="https://3do.eu/"><img src="https://3do.eu/img/logo-1645171273.jpg" width="200" ></a>
+<a alt="3DO" href="https://3do.eu/"><img src="https://3do.dk/img/logo-1694603603.jpg" width="200" ></a>
 
 USA 
 
