@@ -1,59 +1,68 @@
 # 3DO 4K USB CAMERA
 
 The 3DO USB Camera is a compact USB camera based on the IMX485 sensor, designed for use with 3D printers.
-This repository contains reference designs, additional resources may be found on printables.com or similar platforms.
+This repository contains reference designs; additional resources may be found on printables.com or similar platforms.
 
-<img src="./images/3DO-WEBCAMERA.png "  width="50%">
+<img src="./images/3DO-WEBCAMERA.png" width="50%">
 
 |                         | 4K (Sony IMX258)     |
 |-------------------------|----------------------|
 | Sensor Size             | 1/3.06               |
 | Mega-Pixel              | 13MP                 |
-| Frame Rate              | 30FPS@4K 60FPS@1080P |
-| Lens type*              | Auto Focus          |
-| FoV                     | 120Deg                |
-| FPC length              | 5cm                 |
-| Operating temperature** | -20°C TO 60°C        |
+| Frame Rate*             | 30 FPS at 4K, 60 FPS at 1080P* |
+| Lens type               | Auto Focus          |
+| Focus length            | 5 - ∞ cm            |
+| FoV                     | 120 Deg              |
+| FPC length              | 5cm                  |
+| Operating temperature** | -20°C TO 65°C        |
 | Storage temperature     | -40°C TO 80°C        |
+
+_*These frame rates represent what the camera can achieve when directly connected, such as in OBS Studio or the Windows webcam app._
+
+_When streaming through Crowsnest on a Raspberry Pi or a similar device, two factors limit your performance: GPU power and bandwidth._
+
+_The new version of Crowsnest supports WebRTC/H.264 streaming, significantly reducing bandwidth requirements, making it less of a concern. However, when using the WebRTC streaming function, your GPU's encoding capabilities become the limiting factor (For Raspberry Pi 4, the GPU is limited to 1080p at 38 FPS and cannot encode 4K)._
+
+_If you opt for the MJPEG stream in Crowsnest, no encoding is necessary, eliminating GPU limitations. However, this method requires considerably more bandwidth, so your FPS will be restricted by the available network bandwidth (using an Ethernet cable instead of Wi-Fi is recommended)._
 
 
 ## Folders
-- printers  printers (mounts for different printers)
+- printers (mounts for different printers)
 - hardware (similar to [3DO Nozzle camera](https://github.com/3DO-EU/nozzle-camera/tree/main/hardware))
 
 ## Pinout
-PCB uses a 5P 1.0mm pitch connector.
-| Pin No. | Function	 | Color		      |
-|---------|--------------|--------------------|
-| 1       | USB 5VDC     | Red		          |
-| 2       | Data -       | White		      |
-| 3       | Data +       | Green		      |
-| 4       | USB -VDC/GND | Black		      |
-| 5       | GND/Shield   | Black (heat shrink)|
+The PCB uses a 5P 1.0mm pitch connector.
+| Pin No. | Function     | Color                |
+|---------|--------------|----------------------|
+| 1       | USB 5VDC     | Red                  |
+| 2       | Data -       | White                |
+| 3       | Data +       | Green                |
+| 4       | USB -VDC/GND | Black                |
+| 5       | GND/Shield   | Black (heat shrink)  |
 
-Wire no. 5 is an optional shield/drain wire, tho it will work without we recommend installing it.
+Wire number 5 is an optional shield/drain wire, though it will work without it; we recommend installing it.
 
-<img src="./images/pinout_5p.png "  width="35%" align="left">
-<img src="./images/pinout_usb2.png "  width="40%">
+<img src="./images/pinout_5p.png" width="35%" align="left">
+<img src="./images/pinout_usb2.png" width="40%">
 </br> 
 
 
 ## Software
-The camera works as a standard UVC web camera and is therefore compatible with Linux, Windows, and Mac.
+The camera functions as a standard UVC web camera and is, therefore, compatible with Linux, Windows, and Mac.
 For streaming, we recommend using [mainsail](https://github.com/mainsail-crew/mainsail) + [crowsnest](https://github.com/mainsail-crew/crowsnest). 
 
 ## FAQ
 - Does it work in an enclosed printer?
 
-Yes, tho our camera is rated at 60C we have been running it for 48hrs in a 70C industrial heat chamber without any issues.
+Yes, although our camera is rated at 60°C, we have been running it for 48 hours in a 70°C industrial heat chamber without any issues.
 
--  Can I bend/fold the FPC to make it shorter?
+- Can I bend/fold the FPC to make it shorter?
 
-Yes, FPC is flexible and can be bent, if you want to fold it (180deg) we recommend doing this max one time in the same spot, or else you risk braking the lanes inside FPC.
+Yes, the FPC is flexible and can be bent. If you want to fold it (180 degrees), we recommend doing this at most one time in the same spot; otherwise, you risk breaking the lanes inside the FPC.
 
 Example of folding FPC
 
-<img src="./images/FPC_BEND.jpg "  width="20%">
+<img src="./images/FPC_BEND.jpg" width="20%">
 
 ## Where to buy
 EU / UK
