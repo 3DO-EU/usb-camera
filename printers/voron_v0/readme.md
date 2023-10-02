@@ -2,8 +2,11 @@
 
 ### BOM
 1x M3x6-14 BHCS
+
 1x M3 heatinsert
+
 2x M2x10 self tapping screws
+
 
 ### Credits
 - Zruncho for hes [ZeroPanels](https://github.com/zruncho3d/ZeroPanels "ZeroPanels") design
