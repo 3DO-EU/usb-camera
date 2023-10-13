@@ -1,6 +1,6 @@
 # 3DO 4K USB CAMERA
 
-![Discord Shield](https://discordapp.com/api/guilds/1030739969272201236/widget.png?style=shield)
+[![3DO Discord Server](https://discordapp.com/api/guilds/1030739969272201236/widget.png?style=banner2)]( https://discord.com/invite/Ss3q9ccwDq)
 
 The 3DO USB Camera is a compact USB camera based on the IMX485 sensor, designed for use with 3D printers.
 This repository contains reference designs; additional resources may be found on printables.com or similar platforms.
